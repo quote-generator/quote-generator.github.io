@@ -121,20 +121,21 @@
     </div>
 
     <script>
-      var $form = $('#form')
-      url = "https://script.google.com/macros/s/AKfycbxZTnaHoIKzJy6Db2qXZPGrcBjYgFGsYaTDzMn-D88tWb5DgJWs_dSrWsaBnvnyO2Xj/exec"
-      $('#submit-form').on('click', function(e) {
+      var $form = $("#form");
+      url =
+        "https://script.google.com/macros/s/AKfycbxZTnaHoIKzJy6Db2qXZPGrcBjYgFGsYaTDzMn-D88tWb5DgJWs_dSrWsaBnvnyO2Xj/exec";
+      $("#submit-form").on("click", function (e) {
         e.preventDefault();
         var jqxhr = $.ajax({
-        url: url,
-        method: "POST",
-        dataType: "json",
-        data: $form.serializeObject()
+          url: url,
+          method: "POST",
+          dataType: "json",
+          data: $form.serializeObject(),
         }).success(
-        alert("Thanks for joining the waitlist"),
-        $('#email').val('')
+          alert("Thanks for joining the waitlist"),
+          $("#email").val("")
         );
-      }
+      });
     </script>
 
     <script>
