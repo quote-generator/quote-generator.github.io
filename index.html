@@ -122,17 +122,16 @@
     </div>
 
     <script>
+      var $form = $("form#form");
       url =
         "https://script.google.com/macros/s/AKfycbxG1qvhRHOQ1eaLBp6rfHPbEMljXimB2NHYe8ZIaShijwNOkTw_0RagoQ3cO1t-yObP/exec";
-      $("#form").on("click", function (e) {
+      $("#submit").on("click", function (e) {
         e.preventDefault();
-
-        var form = $(this);
-
         $.ajax({
           url: url,
-          type: "GET",
-          data: form.serialize(),
+          method: "GET",
+          dataType: "json",
+          data: $form.serialize(),
           success: function (data) {
             alert("Thanks for joining the waitlist"),
               console.log(data),
