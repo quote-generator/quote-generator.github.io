@@ -124,7 +124,7 @@
     <script>
       url =
         "https://script.google.com/macros/s/AKfycbxG1qvhRHOQ1eaLBp6rfHPbEMljXimB2NHYe8ZIaShijwNOkTw_0RagoQ3cO1t-yObP/exec";
-      $("#form").on("click", function (e) {
+      $("#form").submit(function (e) {
         e.preventDefault();
         $.ajax({
           url: url,
