@@ -123,12 +123,12 @@
 
     <script>
       url =
-        "https://script.google.com/macros/s/AKfycbxG1qvhRHOQ1eaLBp6rfHPbEMljXimB2NHYe8ZIaShijwNOkTw_0RagoQ3cO1t-yObP/exec";
+        "https://script.google.com/macros/s/AKfycbyY4M0rfYA174-YCt6A-E08XJh97rhqLthMXl9_ze6LWRH1yuA8eufe5r9NH2OtrLBX/exec";
       $("#form").submit(function (e) {
         e.preventDefault();
         $.ajax({
           url: url,
-          method: "GET",
+          method: "POST",
           dataType: "json",
           data: $("#form").serialize(),
           success: function (data) {
