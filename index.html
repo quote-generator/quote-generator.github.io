@@ -122,7 +122,7 @@
     </div>
 
     <script>
-      var $form = $("form#form");
+      var $form = $("#form");
       url =
         "https://script.google.com/macros/s/AKfycbxG1qvhRHOQ1eaLBp6rfHPbEMljXimB2NHYe8ZIaShijwNOkTw_0RagoQ3cO1t-yObP/exec";
       $("#submit").on("click", function (e) {
@@ -131,7 +131,7 @@
           url: url,
           method: "GET",
           dataType: "json",
-          data: $form.serializeObject(),
+          data: $form.serialize(),
         }).success(
           alert("Thanks for joining the waitlist"),
           $("#email").val("")
